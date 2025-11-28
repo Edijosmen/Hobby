@@ -1,0 +1,44 @@
+/* styles moved from Index.html */
+:root{
+    --bg:#f7f9fc; --card:#fff; --accent:#2b6cb0; --muted:#6b7280;
+    --radius:10px; --maxw:1000px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background-image: -webkit-image-set('.\img\fondo.jpg');
+    
+}
+*{box-sizing:border-box}
+body{
+    margin:0; background:var(--bg); color:#111; line-height:1.45;
+    display:flex; align-items:center; justify-content:center; min-height:100vh;
+    /* Imagen de fondo desde la carpeta ../img/ */
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding:24px;
+}
+.wrap{width:100%; max-width:var(--maxw); background:var(--card); border-radius:var(--radius);
+    box-shadow:0 6px 24px rgba(16,24,40,.08); overflow:hidden;
+}
+header{display:flex; align-items:center; justify-content:space-between; padding:20px 24px; gap:16px}
+.brand{font-weight:700; color:var(--accent)}
+nav{display:flex; gap:12px; align-items:center}
+nav a{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:8px}
+nav a:hover{background:#eef4ff; color:var(--accent)}
+main{padding:24px; display:grid; gap:18px}
+.parrafo{color: #eef4ff;}
+.title_1{font-size: 1.8rem; color: var(--accent); margin-bottom: 12px; text-align: center;}
+.hero{display:flex; flex-direction:column; gap:12px}
+.hero h1{margin:0; font-size:1.5rem}
+.carousel-inner p{margin:0; color:var(--bg);background-color: var(--muted);}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+.card{background:linear-gradient(180deg,#fff,#fbfdff); padding:16px; border-radius:10px; border:1px solid #f1f5f9}
+footer{padding:16px 24px; font-size:0.9rem; color:var(--muted); border-top:1px solid #f1f5f9; text-align:right}
+.actions{display:flex; gap:8px}
+.btn{background:var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer}
+.btn.ghost{background:transparent; color:var(--accent); border:1px solid #dbeafe}
+@media (max-width:640px){
+    header{flex-direction:column; align-items:flex-start}
+    footer{text-align:left}
+}
