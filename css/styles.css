@@ -1,36 +1,41 @@
 /* styles moved from Index.html */
 :root{
-    --bg:#f7f9fc; --card:#fff; --accent:#2b6cb0; --muted:#6b7280;
+    --bg:#f7f9fc; --card:#fff; --accent:#2b6cb0; --muted:#6b7280;--background:220 40% 5%;
     --radius:10px; --maxw:1000px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     background-image: -webkit-image-set('.\img\fondo.jpg');
-    
+    --tw-drop-shadow: drop-shadow(0 0 30px rgba(0, 200, 255, 0.5));
+    --muted-groud: 210 40% 65%;
+    --foreground:210 100% 95%;
+    --gradient-card: linear-gradient(180deg, hsl(220 35% 8%) 0%, hsl(220 40% 6%) 100%);
+    --gradient-hero: linear-gradient(135deg,hsl(220 40% 5%) 0%,hsl(220 50% 10%) 50%,hsl(200 60% 15%) 100% );
+    --primary: 200 100% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%) 0% 0%, hsl(200 100% 65%) 100%);
+
 }
 *{box-sizing:border-box}
 body{
     margin:0; background:var(--bg); color:#111; line-height:1.45;
-    display:flex; align-items:center; justify-content:center; min-height:100vh;
+    /*display:flex; align-items:center; justify-content:center; min-height:100vh;*/
     /* Imagen de fondo desde la carpeta ../img/ */
     background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding:24px;
+   
 }
-.wrap{width:100%; max-width:var(--maxw); background:var(--card); border-radius:var(--radius);
-    box-shadow:0 6px 24px rgba(16,24,40,.08); overflow:hidden;
-}
+
 header{display:flex; align-items:center; justify-content:space-between; padding:20px 24px; gap:16px}
 .brand{font-weight:700; color:var(--accent)}
 nav{display:flex; gap:12px; align-items:center}
 nav a{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:8px}
 nav a:hover{background:#eef4ff; color:var(--accent)}
-main{padding:24px; display:grid; gap:18px}
+/**main{padding:24px; display:grid; gap:18px}**/
 .parrafo{color: #eef4ff;}
 .title_1{font-size: 1.8rem; color: var(--accent); margin-bottom: 12px; text-align: center;}
 .hero{display:flex; flex-direction:column; gap:12px}
-.hero h1{margin:0; font-size:1.5rem}
+/**.hero h1{margin:0; font-size:1.5rem}**/
 .carousel-inner p{margin:0; color:var(--bg);background-color: var(--muted);}
 .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
 .card{background:linear-gradient(180deg,#fff,#fbfdff); padding:16px; border-radius:10px; border:1px solid #f1f5f9}
@@ -38,6 +43,130 @@ footer{padding:16px 24px; font-size:0.9rem; color:var(--muted); border-top:1px s
 .actions{display:flex; gap:8px}
 .btn{background:var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer}
 .btn.ghost{background:transparent; color:var(--accent); border:1px solid #dbeafe}
+.drop-shadow{
+  font-size: 4.5rem; /* text-5xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+  background: linear-gradient(90deg, #00d4ff, #0077ff); /* bg-gradient-primary (ejemplo) */
+  -webkit-background-clip: text; /* bg-clip-text */
+  background-clip: text;
+  color: transparent; /* text-transparent */
+  filter: drop-shadow(0 0 30px rgba(0, 200, 255, 0.5)); /* drop-shadow[...] */
+  text-align: center; /* text-center */
+ 
+}
+.drop-shadow2{
+  font-size: 2.2rem; /* text-5xl */
+  font-weight: 700; /* font-bold */
+  margin: 1.5rem; /* mb-6 */
+  background: linear-gradient(90deg, #00d4ff, #0077ff); /* bg-gradient-primary (ejemplo) */
+  -webkit-background-clip: text; /* bg-clip-text */
+  background-clip: text;
+  color: transparent; /* text-transparent */
+  filter: drop-shadow(0 0 30px rgba(0, 200, 255, 0.5)); /* drop-shadow[...] */
+  text-align: center; /* text-center */
+ 
+}
+.capa-gradiente {
+  min-height: 100vh;
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.drosh{
+  align-content: center;
+  min-height: 100vh;
+  text-align: -webkit-center;
+  background: linear-gradient(
+    to bottom,
+    hsla(220, 40%, 5%, 0.8),
+    hsla(220, 40%, 5%, 0.6),
+    hsl(220, 40%, 5%)
+  );
+    
+}
+.muted{
+    color: hsl(var(--muted-groud));
+    text-align: center;
+    max-width: 42rem;
+}
+.muted-text{ color: hsl(var(--muted-groud));}
+.carousel-inner{
+  padding: 2rem;
+
+}
+.card-gall{
+  background-color: hsl(var(--background));
+  padding-right: 2rem;
+  padding-left: 2rem;
+   text-align: -webkit-center;
+}
+.card{
+  background-image: var(--gradient-card);
+}
+.formulario-body{ 
+  background-image: var(--gradient-card); 
+  padding: 2rem; border-radius: var(--radius); 
+  margin: auto; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  max-width: 42rem;
+}
+.text-fore{
+color:hsl(var(--foreground) / 0.9);
+text-align: center;
+}
+.texto-hover {
+  font-size: 1.25rem;             /* text-xl */
+  font-weight: 700;               /* font-bold */
+  margin-bottom: 0.75rem;         /* mb-3 */
+  color: hsl(var(--foreground));  /* text-foreground */
+  transition: color 150ms;        /* transition-colors */
+}
+.btn{
+  background-image: var(--gradient-primary);
+}
+/* group-hover:text-primary */
+.group:hover .texto-hover {
+  color: hsl(var(--primary));     /* text-primary */
+}
+
+/* Hover effect: change border to blue and lift the card slightly */
+.card{ position:relative; z-index:0; transition: border-color .18s ease, transform .12s ease; }
+.card::after{
+  /* Pseudo-element used to create an outer glow only on the borders */
+  content: "";
+  position: absolute;
+  left: 0px; top: 0px; right: 0px; bottom: 0px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 0 0 rgba(43,108,176,0);
+  transition: box-shadow .22s ease, opacity .16s ease;
+}
+.card:hover{ border-color: var(--accent); transform: translateY(-3px); }
+.card:hover::after{ opacity: 2; box-shadow: 0 0 24px 10px rgba(43,108,176,0.20); }
+
+.grid-layout {
+  display: grid;                 /* grid */
+  gap: 1.5rem;                   /* gap-6 → 24px */
+  grid-template-columns: 1fr;    /* por defecto, una columna */
+}
+
+/* md:grid-cols-2 → desde 768px */
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* lg:grid-cols-4 → desde 1024px */
+@media (min-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width:640px){
     header{flex-direction:column; align-items:flex-start}
     footer{text-align:left}
